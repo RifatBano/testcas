@@ -1,0 +1,30 @@
+junittest
+------------------
+https://howtodoinjava.com/spring-boot2/spring-boot-junit-resttemplate/
+
+in service, write
+-------------------------
+
+@Autowired
+    CloseableHttpClient httpClient;
+ 
+    @Bean
+    public RestTemplate restTemplate() {
+        RestTemplate restTemplate = new RestTemplate(clientHttpRequestFactory());
+        return restTemplate;
+    }
+
+link---(https://howtodoinjava.com/spring-restful/resttemplate-httpclient-java-config/)
+
+in pom.xml
+-------------------
+<dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
